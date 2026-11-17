@@ -54,3 +54,30 @@ def mean(values):
         raise ValueError("mean() of empty data")
 
     return total / count
+
+#power function
+
+
+
+
+
+
+#factorial function
+
+
+
+
+
+#sin function
+
+#count divisors
+
+def divisors(n):
+    numList = []
+    for i in range(1, n+1):
+        if n%i == 0:
+            numList.append(i)
+    return numList
+
+d = divisors(36)
+print(d)
