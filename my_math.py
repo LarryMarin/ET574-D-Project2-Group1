@@ -74,9 +74,14 @@ def mean(values):
 
 def divisors(n):
     numList = []
-    for i in range(1, n+1):
+    i = 1
+    while i*i <= n:
         if n%i == 0:
             numList.append(i)
+            if n//i != i:
+                numList.append(n//i)
+        i+=1
+    numList.sort()
     return numList
 
 d = divisors(36)
