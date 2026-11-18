@@ -68,10 +68,9 @@ def mean(values):
 
 
 
-#sin function
 
-#count divisors
 
+#Larry Marin Functions
 """
 
 function name: divisors
@@ -99,3 +98,12 @@ def divisors(n):
         i+=1
     numList.sort()
     return numList
+
+def sqrt(x):
+    guess = x
+    if x == 0:
+        return 0.0
+    for i in range(50):
+        guess = (guess + x/guess)/2.0
+
+    return guess
