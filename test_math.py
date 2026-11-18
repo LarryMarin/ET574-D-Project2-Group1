@@ -71,7 +71,17 @@ class TestMyMath(unittest.TestCase):
         with self.assertRaises(ValueError):
             divisors(0)
 
+    # ----- sqrt -----
+    #Larry's test cases
+    # test if sqrt() returns the expected values for typical inputs
+    # use assertAlmostEqual() because the results are floats
+    def test_sqrt_basic(self):
+        self.assertAlmostEqual(sqrt(25), 5.0)
+        self.assertAlmostEqual(sqrt(2.25), 1.5)
 
+    # test the edge case: the square root of 0 is 0.0
+    def test_sqrt_zero(self):
+        self.assertAlmostEqual(sqrt(0), 0.0)
     
 if __name__ == "__main__":
     unittest.main(verbosity=2)

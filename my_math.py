@@ -99,10 +99,20 @@ def divisors(n):
     numList.sort()
     return numList
 
+
+"""
+
+function name: sqrt
+purpose: Computes the square root of a non-negative number using Newton's method,
+without using the math module. The function validates that the input is a number
+(booleans and strings are rejected) and that it is not negative.
+parameters: x (int or float): A non-negative number.
+return value(s): (float): The square root of x.
+
+"""
+
 def sqrt(x):
-    if isinstance(x, bool):
-        raise TypeError("sqrt(x) does not accept True or False")
-    if not isinstance(x, (int, float)):
+    if isinstance(x, bool) or not isinstance(x, (int, float)):
         raise TypeError("sqrt(x) requires a number")
     if x < 0:
         raise ValueError("x must be non-negative")
