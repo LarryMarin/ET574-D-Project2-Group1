@@ -1,5 +1,5 @@
 import unittest
-from my_math import fibonacci, mean
+from my_math import fibonacci, mean, divisors
 
 class TestMyMath(unittest.TestCase):
     # ----- fibonacci-----
@@ -60,5 +60,15 @@ class TestMyMath(unittest.TestCase):
         with self.assertRaises((TypeError, ValueError)):
             mean([1, "two", 3])  
 
+        # ----- divisors -----
+    # test if divisors() returns the expected list for a positive integer
+    def test_divisors_basic(self):
+        self.assertEqual(divisors(12), [1, 2, 3, 4, 6, 12])
+
+    # test if an error is raised when 0 is passed in
+    def test_divisors_zero(self):
+        with self.assertRaises(ValueError):
+            divisors(0)
+            
 if __name__ == "__main__":
     unittest.main(verbosity=2)
