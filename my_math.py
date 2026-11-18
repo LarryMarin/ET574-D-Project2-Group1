@@ -72,7 +72,23 @@ def mean(values):
 
 #count divisors
 
+"""
+
+function name: divisors
+purpose: Returns all positive divisors of a positive integer in ascending order.
+The function validates that the input is a positive integer (0, negative numbers,
+decimals, booleans, and strings are rejected).
+parameters: n (int): A positive integer.
+return value(s): (list): A sorted list of all positive divisors of n.
+
+"""
+
 def divisors(n):
+    if isinstance(n, bool) or not isinstance(n, int):
+        raise TypeError("divisors(n) requires an integer n")
+    if n <= 0:
+        raise ValueError("n must be a positive integer")
+
     numList = []
     i = 1
     while i*i <= n:
@@ -83,6 +99,3 @@ def divisors(n):
         i+=1
     numList.sort()
     return numList
-
-d = divisors(36)
-print(d)
