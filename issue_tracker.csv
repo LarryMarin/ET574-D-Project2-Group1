@@ -1,2 +1,11 @@
 ID,TYPE,COMMIT #,STATUS,DESCRIPTION,REPORTER,ASSIGNEE,DUE,CREATED,RESOLVED,NOTES
-,,,,,,,,,,
+1,Setup,37c9f84,Closed,Initial commit of the repository,Larry,Larry,,11/17/26,11/17/26,Repository created
+2,Task,8d7a086,Closed,Added my_math.py and test_math.py files to the repository,Larry,Larry,,11/17/26,11/17/26,
+3,Feature,da70278,Closed,Created initial divisors function,Larry,Larry,,11/17/26,11/17/26,
+4,Enhancement,88538b8,Closed,Updated divisors function to accept only positive integers and tested it,Larry,Larry,,11/17/26,11/17/26,Rejects 0 / negatives / decimals / strings
+5,Documentation,7c3f107,Closed,Added description comment for divisors function,Larry,Larry,,11/18/26,11/18/26,
+6,Test,b80145b,Closed,Added 2 test cases for divisors function,Larry,Larry,,11/18/26,11/18/26,Typical and invalid input cases
+7,Feature,cd8ba2a,Closed,Created base sqrt function without validation,Larry,Larry,,11/18/26,11/18/26,
+8,Enhancement,a6281e3,Closed,Added input checks to sqrt function,Larry,Larry,,11/18/26,11/18/26,TypeError for strings and booleans; ValueError for negatives
+9,Test,6f1efd8,Closed,Added test cases for sqrt function,Larry,Larry,,11/18/26,11/18/26,2 tests: basic and zero
+10,Task,c6819b3,Closed,Created issue_tracker.csv,Larry,Larry,,11/18/26,11/18/26,
