@@ -100,6 +100,13 @@ def divisors(n):
     return numList
 
 def sqrt(x):
+    if isinstance(x, bool):
+        raise TypeError("sqrt(x) does not accept True or False")
+    if not isinstance(x, (int, float)):
+        raise TypeError("sqrt(x) requires a number")
+    if x < 0:
+        raise ValueError("x must be non-negative")
+
     guess = x
     if x == 0:
         return 0.0
@@ -107,3 +114,5 @@ def sqrt(x):
         guess = (guess + x/guess)/2.0
 
     return guess
+
+
