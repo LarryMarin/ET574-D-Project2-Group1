@@ -55,7 +55,35 @@ def mean(values):
 
     return total / count
 
-#power function
+#Andrel Sheppard functions
+
+"""
+function name: pow
+purpose: Returns the result of raising a number x to
+the power of y. The function validates that both
+inputs are numbers and rejects invalid inputs.
+It also prevents division by zero when x is zero
+and y is negative.
+parameters:
+x (int or float): The base number.
+y (int or float): The exponent.
+return value(s):
+(int or float): The result of x raised to the power of y.
+
+"""
+
+def pow(x, y):
+    if not isinstance(x, (int, float)) or isinstance(x, bool):
+        raise TypeError("The base must be a number.")
+
+    if not isinstance(y, (int, float)) or isinstance(y, bool):
+        raise TypeError("The exponent must be a number.")
+
+    if x == 0 and y < 0:
+        raise ValueError("Zero cannot have a negative exponent.")
+
+    return x ** y
+
 
 
 
