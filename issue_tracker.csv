@@ -9,3 +9,8 @@ ID,TYPE,COMMIT #,STATUS,DESCRIPTION,REPORTER,ASSIGNEE,DUE,CREATED,RESOLVED,NOTES
 8,Enhancement,a6281e3,Closed,Added input checks to sqrt function,Larry,Larry,,11/18/26,11/18/26,TypeError for strings and booleans; ValueError for negatives
 9,Test,6f1efd8,Closed,Added test cases for sqrt function,Larry,Larry,,11/18/26,11/18/26,2 tests: basic and zero
 10,Task,c6819b3,Closed,Created issue_tracker.csv,Larry,Larry,,11/18/26,11/18/26,
+11,Feature,ff09349,Closed,Implemented pow function with input validation,Andrel,Andrel,,11/23/26,11/23/26,Supports positive and negative exponents
+12,Test,6ca0bf0,Closed,Added test cases for pow function,Andrel,Andrel,,11/23/26,11/23/26,Tested normal and invalid inputs
+13,Feature,c6ce779,Closed,Implemented area_of_circle function,Andrel,Andrel,,11/23/26,11/23/26,Calculates the area of a circle
+14,Test,77d269b,Closed,Added test cases for area_of_circle,Andrel,Andrel,,11/23/26,11/23/26,Tested normal and invalid inputs
+15,Enhancement,8337fed,Closed,Removed test cases for both functions,Andrel,Andrel,,11/23/26,11/23/26,Test cases were removed in this commit
