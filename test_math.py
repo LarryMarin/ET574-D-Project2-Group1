@@ -1,5 +1,5 @@
 import unittest
-from my_math import fibonacci, mean, divisors, sqrt, pow
+from my_math import fibonacci, mean, divisors, sqrt, pow, area_of_circle
 
 class TestMyMath(unittest.TestCase):
     # ----- fibonacci-----
@@ -86,3 +86,21 @@ if __name__ == "__main__":
     def test_pow_zero_negative(self):
         with self.assertRaises(ValueError):
             pow(0, -1)
+
+
+    # -------- area_of_circle --------
+
+    def test_area_of_circle_basic(self):
+        self.assertAlmostEqual(area_of_circle(2), 12.56637, places=4)
+        self.assertAlmostEqual(area_of_circle(5), 78.53982, places=4)
+        self.assertEqual(area_of_circle(0), 0)
+
+    def test_area_of_circle_bad_inputs(self):
+        with self.assertRaises(TypeError):
+            area_of_circle("five")
+
+        with self.assertRaises(TypeError):
+            area_of_circle(True)
+
+        with self.assertRaises(ValueError):
+            area_of_circle(-3)
