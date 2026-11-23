@@ -85,6 +85,39 @@ def pow(x, y):
     return x ** y
 
 
+"""
+
+function name: area_of_circle(r)
+purpose:Calculates the area of a circle using the formula π × r². 
+The function validates that the input is a number (booleans and strings are rejected) 
+and that the radius is not negative.
+Parameters: r (int or float): The non-negative radius of the circle.
+Return value(s): (float): The area of the circle.
+
+"""
+
+from math import pi
+
+def area_of_circle(r):
+    """
+    Calculates the area of a circle.
+
+    Parameters:
+        r (int or float): The radius of the circle.
+
+    Returns:
+        float: The area of the circle.
+    """
+
+    if not isinstance(r, (int, float)) or isinstance(r, bool):
+        raise TypeError("Radius must be a number.")
+
+    if r < 0:
+        raise ValueError("Radius cannot be negative.")
+
+   
+    return pi * pow(r, 2)
+
 
 
 
