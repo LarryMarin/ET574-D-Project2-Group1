@@ -65,42 +65,4 @@ class TestMyMath(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main(verbosity=2)
 
-    # -------- pow --------
-
-    def test_pow_basic(self):
-        self.assertEqual(pow(2, 3), 8)
-        self.assertEqual(pow(5, 2), 25)
-        self.assertEqual(pow(2, 0), 1)
-        self.assertEqual(pow(2, -3), 0.125)
-
-    def test_pow_bad_inputs(self):
-        with self.assertRaises(TypeError):
-            pow("a", 2)
-
-        with self.assertRaises(TypeError):
-            pow(2, "b")
-
-        with self.assertRaises(TypeError):
-            pow(True, 2)
-
-    def test_pow_zero_negative(self):
-        with self.assertRaises(ValueError):
-            pow(0, -1)
-
-
-    # -------- area_of_circle --------
-
-    def test_area_of_circle_basic(self):
-        self.assertAlmostEqual(area_of_circle(2), 12.56637, places=4)
-        self.assertAlmostEqual(area_of_circle(5), 78.53982, places=4)
-        self.assertEqual(area_of_circle(0), 0)
-
-    def test_area_of_circle_bad_inputs(self):
-        with self.assertRaises(TypeError):
-            area_of_circle("five")
-
-        with self.assertRaises(TypeError):
-            area_of_circle(True)
-
-        with self.assertRaises(ValueError):
-            area_of_circle(-3)
+   
