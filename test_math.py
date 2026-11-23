@@ -1,5 +1,5 @@
 import unittest
-from my_math import fibonacci, mean, divisors, sqrt
+from my_math import fibonacci, mean, divisors, sqrt, pow
 
 class TestMyMath(unittest.TestCase):
     # ----- fibonacci-----
@@ -64,3 +64,25 @@ class TestMyMath(unittest.TestCase):
     
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+    # -------- pow --------
+
+    def test_pow_basic(self):
+        self.assertEqual(pow(2, 3), 8)
+        self.assertEqual(pow(5, 2), 25)
+        self.assertEqual(pow(2, 0), 1)
+        self.assertEqual(pow(2, -3), 0.125)
+
+    def test_pow_bad_inputs(self):
+        with self.assertRaises(TypeError):
+            pow("a", 2)
+
+        with self.assertRaises(TypeError):
+            pow(2, "b")
+
+        with self.assertRaises(TypeError):
+            pow(True, 2)
+
+    def test_pow_zero_negative(self):
+        with self.assertRaises(ValueError):
+            pow(0, -1)
